@@ -66,15 +66,10 @@ const welcomeUsers = (users)  => {
             userAge = getUserAge(birthYear)
             console.log(`Witaj ${name} ${surname}, w tym roku kończysz ${userAge} lat!`)
         }
-        if (birthYear % 2 == 0 & birthYear >= 22 & birthYear < 25)  {
-            userAge = getUserAge(birthYear)
-            console.log(`Witaj ${name} ${surname}, w tym roku kończysz ${userAge} lata!`)
-        }
         if (birthYear % 2 == 1) {
             console.log(`${name} ${surname}, jesteś zwolniony!`)
         }
     }
 };
-
 
 welcomeUsers(users); 
