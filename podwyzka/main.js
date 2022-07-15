@@ -57,11 +57,9 @@ const welcomeUsers = (users)  => {
         if (salary > 15000) {
             console.log('Witaj, prezesie!')
         }
-
         if (salary < 5000) {
             console.log(`${name} ${surname}, szykuj się na podwyżkę!`)
         }
-
         if (birthYear % 2 == 0) {
             userAge = getUserAge(birthYear)
             console.log(`Witaj ${name} ${surname}, w tym roku kończysz ${userAge} lat!`)
