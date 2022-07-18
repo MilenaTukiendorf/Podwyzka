@@ -54,22 +54,13 @@
             echo null;
         }
     };
-        $letter = (int)$numberValue;
-        $letter = 'Ela nie ma kota.';
-        $b = str_split($letter, 1);
-        var_dump($b);
-    
-        $numberValue = ["5","2","22","555","33","222","9999","66","444","55"];
-        $c =str_split($numberValue, 1);
-        var_dump($c);
 
     class PhoneKeyboardConverter {
 
-        public static function convertToNumeric($letter) {
-            $letter = $letters.array_change_key_case().str_split("");
-            $letter = array("Ela nie ma kota.");
+        public static function convertToNumeric($text) {
+            $letters = $text.array_change_key_case().str_split("");
         
-            for ($i = 0; $i < count($letter); $i++) {
+            for ($i = 0; $i < count($letters); $i++) {
                 $letter= $letters[$i];
         
                 $numberValue = convertLetterToNumberValue($letters);
@@ -79,14 +70,9 @@
              return $result;
         }
         
-        PhoneKeyboardConverter.convertToNumeric('Ela nie ma kota'); 
-            echo $numericResult;
-            
         
-        static function convertToString ($numberArray) {
+        public static function convertToString ($numberArray) {
         
-                $numberArray = ["5","2","22","555","33","222","9999","66","444","55"];
-            
                 for ($i = 0; $i < count($numberArray); $i++) {
                     $numberValue = $numberArray[$i];
             
@@ -97,10 +83,13 @@
             
             return $result.join(',', $numberArray);
         
-        PhoneKeyboardConverter.convertToString("5","2","22","555","33","222","9999","66","444","55");
-            echo  $stringResult;
         }
-        };
+    };
 
+    $stringResult = PhoneKeyboardConverter.convertToString(5,2,22,555,33,222,9999,66,444,55);
+    echo $stringResult;
+
+    $numericResult = PhoneKeyboardConverter.convertToNumeric('Ela nie ma kota'); 
+    echo $numericResult;
 
 ?>
