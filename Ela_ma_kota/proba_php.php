@@ -1,7 +1,6 @@
 <?php 
     public static function convertLetterToNumberValue($letter) {
         $letter = ["Ela nie ma kota."];
-        $numberValue = (int)$letter;
         if ($letter == " ") {
             echo "0";
         } if ($letter == "e") {
@@ -30,8 +29,7 @@
 
     
     public static function convertNumberValueToLetter($numberValue) {
-        $numberValue = ["5","2","22","555","33","222","9999","66","444","55"]; 
-        $letter = (int)$numberValue;
+        $numberValue = ["5","2","22","555","33","222","9999","66","444","55"];
         if ($numberValue == "0") {
             echo " ";
         } if ($numberValue == "5") {
@@ -99,10 +97,10 @@
             $result.array_push($letter);
         }
     
-        return $result.join('')
+        return $result.join(',', $numberArray);
     ;
     
-    $stringResult = convertToString([5,2,22,555,33,222,9999,66,444,55])
+    $stringResult = convertToString("5","2","22","555","33","222","9999","66","444","55");
     echo  $stringResult;
 };
 
