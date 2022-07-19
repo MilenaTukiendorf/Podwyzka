@@ -63,7 +63,7 @@
             for ($i = 0; $i < count($letters); $i++) {
                 $letter= $letters[$i];
         
-                $numberValue = convertLetterToNumberValue($letters);
+                $numberValue = convertLetterToNumberValue($letter);
                 $result.array_push($numberValue);
             }
 
@@ -86,10 +86,10 @@
         }
     };
 
-    $stringResult = PhoneKeyboardConverter.convertToString(5,2,22,555,33,222,9999,66,444,55);
+    $stringResult = PhoneKeyboardConverter::convertToString([5,2,22,555,33,222,9999,66,444,55]);
     echo $stringResult;
 
-    $numericResult = PhoneKeyboardConverter.convertToNumeric('Ela nie ma kota'); 
+    $numericResult = PhoneKeyboardConverter::convertToNumeric('Ela nie ma kota'); 
     echo $numericResult;
 
 ?>
