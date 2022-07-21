@@ -1,57 +1,57 @@
 <?php 
     function convertLetterToNumberValue($letter) {
         if ($letter == " ") {
-            echo "0";
+            return 0;
         } if ($letter == "e") {
-            echo "33";
+            return 33;
         } if ($letter == "l") {
-            echo "555"; 
+            return 555; 
         } if ($letter == "a") {
-            echo "2";
+            return 2;
         } if ($letter == "n") {
-            echo  "66";
+            return 66;
         } if ($letter == "i") {
-            echo  "444";
+            return 444;
         } if ($letter == "m") {
-            echo "6";
+            return 6;
         } if ($letter == "k") {
-            echo "55";
+            return 55;
         }if ($letter == "o") {
-            echo "666";
+            return 666;
         } if ($letter == "t") {
-            echo "8";
+            return 8;
         }
         else {
-            echo null;
+            return null;
         }
     };
 
     
     function convertNumberValueToLetter($numberValue) {
-        if ($numberValue == "0") {
-            echo " ";
-        } if ($numberValue == "5") {
-            echo "j";
-        }  if ($numberValue == "22") {
-            echo "b";
-        } if ($numberValue == "2") {
-            echo "a";
-        }  if ($numberValue == "555") {
-            echo "l";
-        }  if ($numberValue == "33") {
-            echo "e";
-        }  if ($numberValue == "222") {
-            echo "c";
-        } if ($numberValue == "9999") {
-            echo "z";
-        } if ($numberValue == "66") {
-            echo "n";
-        }  if ($numberValue == "444") {
-            echo "i";
-        }  else if ($numberValue == "55") {
-            echo "k";
+        if ($numberValue == 0) {
+            return " ";
+        } if ($numberValue == 5) {
+            return "j";
+        }  if ($numberValue == 22) {
+            return "b";
+        } if ($numberValue == 2) {
+            return "a";
+        }  if ($numberValue == 555) {
+            return "l"
+        }  if ($numberValue == 33) {
+            return "e";
+        }  if ($numberValue == 222) {
+            return "c";
+        } if ($numberValue == 9999) {
+            return "z";
+        } if ($numberValue == 66) {
+            return "n";
+        }  if ($numberValue == 444) {
+            return "i";
+        }  else if ($numberValue == 55) {
+            return "k";
         } else {
-            echo null;
+            return null;
         }
     };
 
